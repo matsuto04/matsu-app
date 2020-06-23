@@ -1,0 +1,38 @@
+* {
+  box-sizing:border-box;
+}
+  .contents{
+    height:calc(100vh - 70px );
+    width:100vw;
+    display:flex;
+    &__left{
+      background-image:url("<%= asset_path('image.jpg') %>");
+      width:35%;
+      position:relative;
+      a{
+        color:#000;
+        font-size:100px;
+        text-decoration:none;
+        position:absolute;
+        left:50px;
+        top:65%;
+      }
+    }
+    &__main{
+      background-color:black;
+      width:calc( 100vw - 35% - 35%);
+    }
+    &__right{
+      background-color: #99CC33;
+      width:35%;
+      a{
+        color:#000;
+        font-size:100px;
+        text-decoration:none;
+        position:absolute;
+        right:40px;
+        top:70%;
+      }
+    }
+  }
+  

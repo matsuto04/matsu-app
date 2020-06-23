@@ -1,0 +1,41 @@
+.mainChat
+  .chat-top
+    .chat-top__info
+      .chat-top__info--groupName
+        グループ名
+      =link_to "#", class:"chat-top__info--edit" do
+        edit
+  .chat-main
+    .chatContent
+      .chatContent__userName
+        .chatContent__userName--name
+          名前
+        .chatContent__userName--date
+          日時
+      .chatContent__comment
+        コメント
+
+      .chatContent__userName
+        .chatContent__userName--name
+          名前
+        .chatContent__userName--date
+          日時
+      .chatContent__comment
+        コメント
+
+      .chatContent__userName
+        .chatContent__userName--name
+          名前
+        .chatContent__userName--date
+          日時
+      .chatContent__comment
+        コメント
+  .chat-bottom
+    %form.form
+      .formText
+        %input.formText__text{type:"text", placeholder:"type a message"}
+        %label{class: "formText__image"}
+          = icon('fas','image')
+          %input{type: "file"}
+      .formSubmit
+        %input.formSubmit__btn{type:"submit",value:"送信"}

@@ -1,0 +1,47 @@
+.header{
+  height:70px;
+  width:100vw;
+  display:flex;
+  &__left{
+    width:40%;
+    background-color:navy; 
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    .headerInfo{
+      width:100%;
+      padding-left:10px;
+      display:flex;
+      justify-content: space-between;
+      align-items:center;
+      &__name{
+        color:#fff;
+        font-size:30px;
+      }
+      &__symbol{
+        a{
+          color:#fff;
+          text-decoration:none;
+          padding-right:10px;
+          font-size:25px;
+        }
+      }
+    }
+  }
+  &__right{
+    width:calc(100vw - 40px);
+    background-color: navy;
+    .topic{
+      display: flex;
+      justify-content: space-around;
+      padding: 10px;
+      a{
+        text-decoration: none;
+        color:#fff;
+        font-size: 35px;
+        opacity:0.75;
+      }
+      
+    }
+  }
+}

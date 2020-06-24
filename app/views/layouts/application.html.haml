@@ -8,22 +8,5 @@
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_pack_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-  .header
-    .header__left
-      .headerInfo
-        .headerInfo__name
-          現在のユーザー
-        .headerInfo__symbol
-          = link_to "#",class:"headerInfo__symbol--edit" do
-            = icon("fas","user-edit")
-          = link_to "#",class:"headerInfo__symbol--cog" do
-            = icon('fas',"user-cog")
-    .header__right
-      .topic
-        =link_to root_path,class:"topic__list" do
-          top
-        =link_to tweets_path,class:"topic__list" do
-          tweet
-        =link_to comments_path,class:"topic__list" do
-          chat
+  
   = yield

@@ -4,5 +4,5 @@ Rails.application.routes.draw do
   resources :users, only: [:edit, :update]
   resources :comments,only: :index
   resources :tweets,only: :index
-  
+  resources :groups,only: [:new, :create,:edit,:update,:index]
 end

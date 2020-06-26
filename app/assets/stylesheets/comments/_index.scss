@@ -29,7 +29,7 @@
   height:calc(100vh - 80px);
   
   .chat-top{
-    height:60px;
+    height:50px;
     background-color:#F0FFFF;
     &__info{
       display: flex;
@@ -37,24 +37,24 @@
       align-items: center;
       padding:10px 40px;
       &--groupName{
-        font-size:30px;
-        
+        font-size:20px;
+        font-weight:bold;
       }
       &--edit{
-        font-size:35px;
+        font-size:20px;
         text-decoration: none;
         
       }
     }
   }
   .chat-main{
-    height:calc(100vh - 60px - 90px - 70px);
+    height:calc(100vh - 50px - 90px - 70px);
     background-color: pink;
     padding:0 40px 0 20px;
     overflow:scroll;
     overflow-x: hidden;
     .chatContent{
-      padding-top:30px;
+      padding-top:15px;
       &__userName{
         display:flex;
         justify-content:space-between;
@@ -68,8 +68,10 @@
         }
       }
       &__comment{
-        font-size:30px;
-        padding-bottom:30px;
+        &--text{
+          font-size:20px;
+          padding-bottom:10px;
+        }
       }
     }
   }

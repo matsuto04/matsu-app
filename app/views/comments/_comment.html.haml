@@ -1,0 +1,11 @@
+.chatContent
+  .chatContent__userName
+    .chatContent__userName--name
+      = current_user.name
+    .chatContent__userName--date
+      = comment.created_at.strftime("%Y年%m月%d日 %H時%M分")
+  .chatContent__comment
+    - if comment.text.present?
+      %p.chatContent__comment--text
+        = comment.text
+    = image_tag comment.image.url, class:'chatContent__comment--image' if comment.image.present?

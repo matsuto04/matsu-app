@@ -2,40 +2,19 @@
   .chat-top
     .chat-top__info
       .chat-top__info--groupName
-        グループ名
-      =link_to "#", class:"chat-top__info--edit" do
+        =@group.name
+      =link_to edit_group_path(@group), class:"chat-top__info--edit" do
         edit
+
   .chat-main
-    .chatContent
-      .chatContent__userName
-        .chatContent__userName--name
-          名前
-        .chatContent__userName--date
-          日時
-      .chatContent__comment
-        コメント
+    = render @comments
 
-      .chatContent__userName
-        .chatContent__userName--name
-          名前
-        .chatContent__userName--date
-          日時
-      .chatContent__comment
-        コメント
-
-      .chatContent__userName
-        .chatContent__userName--name
-          名前
-        .chatContent__userName--date
-          日時
-      .chatContent__comment
-        コメント
   .chat-bottom
-    %form.form
+    = form_with model:[@group, @comment], html:{class:'form'}, local: true do |f|
       .formText
-        %input.formText__text{type:"text", placeholder:"type a message"}
-        %label{class: "formText__image"}
+        = f.text_field :text,class:'formText__text',placeholder:'type a message'
+        =f.label :image,class: "formText__image" do
           = icon('fas','image')
-          %input{type: "file"}
+          = f.file_field :image
       .formSubmit
-        %input.formSubmit__btn{type:"submit",value:"送信"}
+        =f.submit 'Send',class:'formSubmit__btn',value:"送信"

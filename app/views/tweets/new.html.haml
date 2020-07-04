@@ -1,0 +1,6 @@
+.content.row
+  .container
+    = form_with(model: @tweet, local: true, class:'form') do |form|
+      %h3
+        投稿する
+      = render partial: "form", locals: {form: form}

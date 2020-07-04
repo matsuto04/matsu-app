@@ -1,0 +1,27 @@
+= render "comments/header"
+.contentShow
+  .contentShow__post{style:"background-image: url(#{@tweet.image});"}
+    - if user_signed_in? && current_user.id == @tweet.user_id
+      .more
+        %ul.more__list
+          %li
+            = link_to '編集',edit_tweet_path(@tweet.id),method: :get
+            = link_to '削除',"/tweets/#{@tweet.id}",method: :delete            
+    %p= @tweet.tweet
+    %span.contentPost__name
+      = @tweet.user.name
+  -# .message
+  -#   -if current_user
+  -#     = form_with(model: [@tweet,@message],local: true) do |form|
+  -#       = form.text_area :tweet, placeholder: "コメントする" , rows: "2",class:'message__form'
+  -#       = form.submit "送信"
+  -#   -else
+  -#     %p
+  -#     ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+  -# .messages
+  -#   %h4
+  -#     コメント一覧
+  -#     - if @messages
+  -#       - @messages.each do |message|
+  -#         %p
+  -#           =message.tweet

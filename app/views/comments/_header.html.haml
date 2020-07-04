@@ -16,3 +16,7 @@
         tweet
       =link_to groups_path,class:"topic__list" do
         chat
+      -if user_signed_in?
+        =link_to 'ログアウト',destroy_user_session_path,method: :DELETE,class:'userNav'
+      -else
+        =link_to 'ログイン',new_user_session_path, class: 'post'

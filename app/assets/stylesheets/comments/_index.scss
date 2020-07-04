@@ -9,11 +9,13 @@
   padding:30px 10px;
   width:300px;
   height:calc( 100vh - 70px);
-  background-color: red;
+  background-color:#C0C0C0;
   .sideBar-list{
     height:100px;
     padding:0 20px;
     margin-top: 20px;
+    background-color:#FFFAFA;
+    opacity:0.5;
     a{
       text-decoration:none;
       color:#000;

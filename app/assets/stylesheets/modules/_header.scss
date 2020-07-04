@@ -5,6 +5,7 @@
   &__left{
     width:40%;
     background-color:navy; 
+    opacity:0.6;
     display:flex;
     justify-content: space-between;
     align-items:center;
@@ -31,6 +32,7 @@
   &__right{
     width:calc(100vw - 40px);
     background-color: navy;
+    opacity:0.6;
     .topic{
       display: flex;
       justify-content: space-around;

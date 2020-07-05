@@ -6,7 +6,7 @@
     width:100vw;
     display:flex;
     &__left{
-      background-image:url("<%= asset_path('image.jpg') %>");
+      background-image:url('image.jpg');
       background-size:cover; 
       width:35%;
       position:relative;
@@ -24,7 +24,8 @@
       width:calc( 100vw - 35% - 35%);
     }
     &__right{
-      background-color: #99CC33;
+      background-image:url('dragons3.png');
+      background-position:center;
       width:35%;
       a{
         color:#000;

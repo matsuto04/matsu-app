@@ -10,18 +10,19 @@
     %p= @tweet.tweet
     %span.contentPost__name
       = @tweet.user.name
-  -# .message
-  -#   -if current_user
-  -#     = form_with(model: [@tweet,@message],local: true) do |form|
-  -#       = form.text_area :tweet, placeholder: "コメントする" , rows: "2",class:'message__form'
-  -#       = form.submit "送信"
-  -#   -else
-  -#     %p
-  -#     ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
-  -# .messages
-  -#   %h4
-  -#     コメント一覧
-  -#     - if @messages
-  -#       - @messages.each do |message|
-  -#         %p
-  -#           =message.tweet
+  .message
+    -if current_user
+      = form_with(model: [@tweet,@message],local: true) do |form|
+        = form.text_area :text, placeholder: "コメントする" , rows: "2",class:'message__form'
+        = form.submit "送信"
+    -else
+      %p
+      ※※※ コメントの投稿には新規登録/ログインが必要です ※※※
+  .messages
+    %h4
+      コメント一覧
+      - if @messages
+        - @messages.each do |message|
+          %p
+            =link_to message.user.name, "/users/#{message.user_id}"
+            =message.tweet

@@ -6,12 +6,12 @@
     width:100vw;
     display:flex;
     &__left{
-      background-image:url('image.jpg');
+      background-image:image-url('image.jpg');
       background-size:cover; 
       width:35%;
       position:relative;
       a{
-        color:#000;
+        color:blue;
         font-size:100px;
         text-decoration:none;
         position:absolute;
@@ -20,15 +20,16 @@
       }
     }
     &__main{
-      background-color:black;
       width:calc( 100vw - 35% - 35%);
+      background-image:image-url('dragons.jpg');
+      background-position:center;
     }
     &__right{
-      background-image:url('dragons3.png');
+      background-image:image-url('dragons3.png');
       background-position:center;
       width:35%;
       a{
-        color:#000;
+        color:#fff;
         font-size:100px;
         text-decoration:none;
         position:absolute;

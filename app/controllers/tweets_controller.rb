@@ -30,10 +30,10 @@ class TweetsController < ApplicationController
     redirect_to tweets_path
   end
 
-  # def show
-  #   @message = Message.new
-  #   @messages = @tweet.messages.includes(:user)
-  # end
+  def show
+    @message = Message.new
+    @messages = @tweet.messages.includes(:user)
+  end
 
   private
     def tweet_params 
